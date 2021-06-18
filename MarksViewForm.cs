@@ -7,23 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using Npgsql;
 
 namespace DBUse
 {
     public partial class MarksViewForm : Form
     {
-        SqlConnection conn = SQLServer.GetDBConnection();
+        
         public MarksViewForm()
         {
             InitializeComponent();
         }
-
+        NpgsqlConnection conn = new SQLServer().GetConnection();
         private void refresher(DataGridView table)
         {
             conn.Open();
-            string query = "SELECT * FROM Student";
-            SqlDataAdapter dataStudent = new SqlDataAdapter(query, conn);
+            string query = "SELECT * FROM Students";
+            NpgsqlDataAdapter dataStudent = new NpgsqlDataAdapter(query, conn);
             DataTable dt = new DataTable();
             dataStudent.Fill(dt);
             table.DataSource = dt;

@@ -16,7 +16,7 @@ namespace DBUse
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MarksViewForm());
+            Application.Run(new LoginForm());
         }
     }
 }

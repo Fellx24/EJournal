@@ -3,26 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
+using Npgsql;
 
 namespace DBUse
 {
     class SQLServer
     {
-        public static SqlConnection
-        GetDBConnection(string datasource, string database)
+        public NpgsqlConnection GetConnection()
         {
-                string connString = @"Data Source=" + datasource + ";Initial Catalog=" + database + ";Integrated Security=True;";
-                SqlConnection conn = new SqlConnection(connString);
-
-                return conn;
-        }
-        public static SqlConnection GetDBConnection()
-        {
-                string datasource = "HDPC2";
-                string database = "SchoolDB";
-
-                return GetDBConnection(datasource, database);
+            return new NpgsqlConnection(
+        @"Server=queenie.db.elephantsql.com;
+        Port=5432;
+        User Id=qenbptuc;
+        Password=p96CcZ62GcjzSr7Ih0Gja7SH_asuHiag;
+        Database=qenbptuc"
+        );
         }
     }
 }

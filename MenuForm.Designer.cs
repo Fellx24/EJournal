@@ -42,6 +42,7 @@
             this.ProfileButton.TabIndex = 12;
             this.ProfileButton.Text = "Профиль";
             this.ProfileButton.UseVisualStyleBackColor = true;
+            this.ProfileButton.Click += new System.EventHandler(this.ProfileButton_Click);
             // 
             // RegisterLabel
             // 

@@ -93,6 +93,7 @@
             this.LoginButton.TabIndex = 11;
             this.LoginButton.Text = "Войти";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // RegisterButton
             // 
@@ -103,6 +104,7 @@
             this.RegisterButton.TabIndex = 12;
             this.RegisterButton.Text = "Регистрация";
             this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // LoginForm
             // 

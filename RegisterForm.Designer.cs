@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ExitButton = new System.Windows.Forms.Button();
+            this.RegisterButton = new System.Windows.Forms.Button();
             this.PasswordTB = new System.Windows.Forms.TextBox();
             this.EmailTB = new System.Windows.Forms.TextBox();
             this.PasswordLabel = new System.Windows.Forms.Label();
@@ -43,15 +43,16 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ExitButton
+            // RegisterButton
             // 
-            this.ExitButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ExitButton.Location = new System.Drawing.Point(122, 335);
-            this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(133, 28);
-            this.ExitButton.TabIndex = 17;
-            this.ExitButton.Text = "Зарегистрироваться";
-            this.ExitButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RegisterButton.Location = new System.Drawing.Point(122, 335);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(133, 28);
+            this.RegisterButton.TabIndex = 17;
+            this.RegisterButton.Text = "Зарегистрироваться";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
             // 
             // PasswordTB
             // 
@@ -163,6 +164,7 @@
             this.BackButton.TabIndex = 24;
             this.BackButton.Text = "Назад";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // RegisterForm
             // 
@@ -176,7 +178,7 @@
             this.Controls.Add(this.SurnameLabel);
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.NameLabel);
-            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.PasswordTB);
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.PasswordLabel);
@@ -184,6 +186,7 @@
             this.Controls.Add(this.RegisterLabel);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,7 +194,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button ExitButton;
+        private System.Windows.Forms.Button RegisterButton;
         private System.Windows.Forms.TextBox PasswordTB;
         private System.Windows.Forms.TextBox EmailTB;
         private System.Windows.Forms.Label PasswordLabel;
