@@ -25,9 +25,10 @@ namespace DBUse
             try
             {
                 NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password) VALUES ({PasswordTB.Text})", conn);
+                insertpwd.ExecuteReader();
                 NpgsqlCommand insertinfo = new NpgsqlCommand(insertquery, conn);
                 insertinfo.ExecuteReader();
-                insertpwd.ExecuteReader();
+                
             }
             catch (PostgresException)
             {
