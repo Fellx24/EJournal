@@ -27,6 +27,12 @@ namespace DBUse
         {
             MenuForm menu = new MenuForm();
             menu.Show();
+            
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

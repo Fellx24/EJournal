@@ -21,6 +21,7 @@ namespace DBUse
         {
             ProfileForm profileForm = new ProfileForm();
             profileForm.Show();
+            
         }
     }
 }

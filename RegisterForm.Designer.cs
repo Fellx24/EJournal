@@ -100,6 +100,7 @@
             this.RegisterLabel.TabIndex = 12;
             this.RegisterLabel.Text = "Регистрация";
             this.RegisterLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.RegisterLabel.Click += new System.EventHandler(this.RegisterLabel_Click);
             // 
             // NameTB
             // 
