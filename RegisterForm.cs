@@ -22,9 +22,11 @@ namespace EJournal
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            NpgsqlDataAdapter emails = new NpgsqlDataAdapter($"SELECT email FROM public.teacher", conn);
-            emails.ToString();
-            string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},\'{EmailTB.Text}\')";
+            conn.Open();
+            NpgsqlDataAdapter emails = new NpgsqlDataAdapter($"SELECT email FROM public.teacher",conn);
+            string email = emails
+            
+            string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{EmailTB.Text})";
             if (EmailTB.Text.Contains("@"))
             {
                 try
@@ -37,8 +39,8 @@ namespace EJournal
                     NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password) VALUES ({PasswordTB.Text})", conn);
                     insertpwd.ExecuteReader();
                     conn.Close();
+                    MenuForm menu = new MenuForm();
                 }
-
                 catch (PostgresException)
                 {
                     MessageBox.Show("Неправильный ввод либо E-mail уже зарегестрирован");
