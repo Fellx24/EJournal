@@ -23,38 +23,28 @@ namespace EJournal
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            SQLServer query = new SQLServer();
             string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},\'{EmailTB.Text}\')";
-            conn.Open();
-            NpgsqlCommand emailcheck = new NpgsqlCommand($"SELECT email FROM public.teacher", conn);
-            NpgsqlDataReader emailreader = emailcheck.ExecuteReader();
-            string email = " ";
-            foreach (var item in emailreader)
-            {
-                email += emailreader["email"].ToString() + " ";
-            }
-            string[] emailmas = email.Split(' ').ToArray();
-            conn.Close();
-            if (emailmas.Contains(EmailTB.Text))
+            string insertpwd = $"INSERT INTO public.users(password,email) VALUES ({PasswordTB.Text},\'{EmailTB.Text}\')";
+            string[] emailarr = query.SearchData("public.teacher", "email", conn);
+
+            if (emailarr.Contains(EmailTB.Text))
             {
                 MessageBox.Show("E-mail уже зарегестрирован");
                 conn.Close();
             }
             else if (EmailTB.Text.Contains('@'))
             {
-                conn.Open();
-                NpgsqlCommand insertinfo = new NpgsqlCommand(insertquery, conn);
-                insertinfo.ExecuteReader();
-                conn.Close();
-                conn.Open();
-                NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password,email) VALUES ({PasswordTB.Text.ToString()},\'{EmailTB.Text.ToString()}\')", conn);
-                insertpwd.ExecuteReader();
-                conn.Close();
+                query.Query(insertquery, conn);
+                query.Query(insertpwd, conn);
                 MenuForm menu = new MenuForm();
                 menu.Show();
             }
             conn.Close();
         }
 
-
+        private void RegisterLabel_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
