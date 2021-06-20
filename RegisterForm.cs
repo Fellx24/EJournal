@@ -29,9 +29,11 @@ namespace DBUse
 
                     conn.Open();
                     NpgsqlCommand insertinfo = new NpgsqlCommand(insertquery, conn);
-                    insertinfo.ExecuteReaderAsync();
+                    insertinfo.ExecuteReader();
+                    conn.Close();
+                    conn.Open();
                     NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password) VALUES ({PasswordTB.Text})", conn);
-                    insertpwd.ExecuteReaderAsync();
+                    insertpwd.ExecuteReader();
                     conn.Close();
 
                 }
