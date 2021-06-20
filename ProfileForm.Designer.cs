@@ -1,4 +1,4 @@
-﻿namespace DBUse
+﻿namespace EJournal
 {
     partial class ProfileForm
     {
@@ -36,8 +36,6 @@
             this.FathernameLabel = new System.Windows.Forms.Label();
             this.SurnameTB = new System.Windows.Forms.TextBox();
             this.FathernameTB = new System.Windows.Forms.TextBox();
-            this.ClassesLabel = new System.Windows.Forms.Label();
-            this.ClassesTB = new System.Windows.Forms.TextBox();
             this.EmailTB = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
             this.BackButton = new System.Windows.Forms.Button();
@@ -47,7 +45,7 @@
             // 
             this.ProfileLabel.AutoSize = true;
             this.ProfileLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ProfileLabel.Location = new System.Drawing.Point(293, 49);
+            this.ProfileLabel.Location = new System.Drawing.Point(113, 65);
             this.ProfileLabel.Name = "ProfileLabel";
             this.ProfileLabel.Size = new System.Drawing.Size(186, 36);
             this.ProfileLabel.TabIndex = 0;
@@ -58,7 +56,7 @@
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.Location = new System.Drawing.Point(96, 144);
+            this.NameLabel.Location = new System.Drawing.Point(92, 126);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(38, 19);
             this.NameLabel.TabIndex = 1;
@@ -67,27 +65,29 @@
             // NameTB
             // 
             this.NameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTB.Location = new System.Drawing.Point(191, 142);
+            this.NameTB.Location = new System.Drawing.Point(187, 124);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(126, 23);
             this.NameTB.TabIndex = 4;
+            this.NameTB.Text = "Мария";
             // 
             // ExitButton
             // 
             this.ExitButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.Red;
-            this.ExitButton.Location = new System.Drawing.Point(511, 183);
+            this.ExitButton.Location = new System.Drawing.Point(136, 297);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(99, 28);
             this.ExitButton.TabIndex = 7;
             this.ExitButton.Text = "Выход";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // SurnameLabel
             // 
             this.SurnameLabel.AutoSize = true;
             this.SurnameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameLabel.Location = new System.Drawing.Point(96, 183);
+            this.SurnameLabel.Location = new System.Drawing.Point(92, 165);
             this.SurnameLabel.Name = "SurnameLabel";
             this.SurnameLabel.Size = new System.Drawing.Size(73, 19);
             this.SurnameLabel.TabIndex = 2;
@@ -97,7 +97,7 @@
             // 
             this.FathernameLabel.AutoSize = true;
             this.FathernameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FathernameLabel.Location = new System.Drawing.Point(96, 222);
+            this.FathernameLabel.Location = new System.Drawing.Point(92, 204);
             this.FathernameLabel.Name = "FathernameLabel";
             this.FathernameLabel.Size = new System.Drawing.Size(71, 19);
             this.FathernameLabel.TabIndex = 3;
@@ -106,50 +106,35 @@
             // SurnameTB
             // 
             this.SurnameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameTB.Location = new System.Drawing.Point(191, 183);
+            this.SurnameTB.Location = new System.Drawing.Point(187, 165);
             this.SurnameTB.Name = "SurnameTB";
             this.SurnameTB.Size = new System.Drawing.Size(126, 23);
             this.SurnameTB.TabIndex = 5;
+            this.SurnameTB.Text = "Кудрявцева";
             // 
             // FathernameTB
             // 
             this.FathernameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FathernameTB.Location = new System.Drawing.Point(191, 222);
+            this.FathernameTB.Location = new System.Drawing.Point(187, 204);
             this.FathernameTB.Name = "FathernameTB";
             this.FathernameTB.Size = new System.Drawing.Size(126, 23);
             this.FathernameTB.TabIndex = 6;
-            // 
-            // ClassesLabel
-            // 
-            this.ClassesLabel.AutoSize = true;
-            this.ClassesLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClassesLabel.Location = new System.Drawing.Point(96, 262);
-            this.ClassesLabel.Name = "ClassesLabel";
-            this.ClassesLabel.Size = new System.Drawing.Size(59, 19);
-            this.ClassesLabel.TabIndex = 8;
-            this.ClassesLabel.Text = "Классы";
-            // 
-            // ClassesTB
-            // 
-            this.ClassesTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ClassesTB.Location = new System.Drawing.Point(191, 262);
-            this.ClassesTB.Name = "ClassesTB";
-            this.ClassesTB.Size = new System.Drawing.Size(488, 23);
-            this.ClassesTB.TabIndex = 9;
+            this.FathernameTB.Text = "Ивановна";
             // 
             // EmailTB
             // 
             this.EmailTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailTB.Location = new System.Drawing.Point(455, 142);
+            this.EmailTB.Location = new System.Drawing.Point(187, 244);
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(224, 23);
             this.EmailTB.TabIndex = 17;
+            this.EmailTB.Text = "kudrevceva.maria1992@gmail.com";
             // 
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailLabel.Location = new System.Drawing.Point(383, 144);
+            this.EmailLabel.Location = new System.Drawing.Point(92, 244);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(45, 19);
             this.EmailLabel.TabIndex = 16;
@@ -158,23 +143,22 @@
             // BackButton
             // 
             this.BackButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BackButton.Location = new System.Drawing.Point(35, 37);
+            this.BackButton.Location = new System.Drawing.Point(22, 21);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(99, 28);
             this.BackButton.TabIndex = 18;
             this.BackButton.Text = "Назад";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 348);
+            this.ClientSize = new System.Drawing.Size(462, 348);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.EmailLabel);
-            this.Controls.Add(this.ClassesTB);
-            this.Controls.Add(this.ClassesLabel);
             this.Controls.Add(this.ExitButton);
             this.Controls.Add(this.FathernameTB);
             this.Controls.Add(this.SurnameTB);
@@ -201,8 +185,6 @@
         private System.Windows.Forms.Label FathernameLabel;
         private System.Windows.Forms.TextBox SurnameTB;
         private System.Windows.Forms.TextBox FathernameTB;
-        private System.Windows.Forms.Label ClassesLabel;
-        private System.Windows.Forms.TextBox ClassesTB;
         private System.Windows.Forms.TextBox EmailTB;
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.Button BackButton;

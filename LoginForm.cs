@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DBUse
+namespace EJournal
 {
     public partial class LoginForm : Form
     {
@@ -26,12 +26,9 @@ namespace DBUse
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if (EmailTB.Text == "nigg3r@nig.ger" && PasswordTB.Text == "nigg333r")
-            {
-                MenuForm menu = new MenuForm();
-                menu.Show();
-                Hide();
-            }
+            MenuForm menu = new MenuForm();
+            menu.Show();
+            Hide();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

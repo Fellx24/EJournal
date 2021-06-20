@@ -1,4 +1,4 @@
-﻿namespace DBUse
+﻿namespace EJournal
 {
     partial class RegisterForm
     {
@@ -46,7 +46,7 @@
             // RegisterButton
             // 
             this.RegisterButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RegisterButton.Location = new System.Drawing.Point(122, 335);
+            this.RegisterButton.Location = new System.Drawing.Point(121, 322);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(133, 28);
             this.RegisterButton.TabIndex = 17;
@@ -57,24 +57,24 @@
             // PasswordTB
             // 
             this.PasswordTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordTB.Location = new System.Drawing.Point(170, 141);
+            this.PasswordTB.Location = new System.Drawing.Point(161, 142);
             this.PasswordTB.Name = "PasswordTB";
-            this.PasswordTB.Size = new System.Drawing.Size(126, 23);
+            this.PasswordTB.Size = new System.Drawing.Size(159, 23);
             this.PasswordTB.TabIndex = 16;
             // 
             // EmailTB
             // 
             this.EmailTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailTB.Location = new System.Drawing.Point(170, 100);
+            this.EmailTB.Location = new System.Drawing.Point(161, 101);
             this.EmailTB.Name = "EmailTB";
-            this.EmailTB.Size = new System.Drawing.Size(126, 23);
+            this.EmailTB.Size = new System.Drawing.Size(159, 23);
             this.EmailTB.TabIndex = 15;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PasswordLabel.Location = new System.Drawing.Point(75, 141);
+            this.PasswordLabel.Location = new System.Drawing.Point(66, 142);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(59, 19);
             this.PasswordLabel.TabIndex = 14;
@@ -84,7 +84,7 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EmailLabel.Location = new System.Drawing.Point(75, 102);
+            this.EmailLabel.Location = new System.Drawing.Point(66, 103);
             this.EmailLabel.Name = "EmailLabel";
             this.EmailLabel.Size = new System.Drawing.Size(45, 19);
             this.EmailLabel.TabIndex = 13;
@@ -105,16 +105,16 @@
             // NameTB
             // 
             this.NameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTB.Location = new System.Drawing.Point(170, 191);
+            this.NameTB.Location = new System.Drawing.Point(161, 192);
             this.NameTB.Name = "NameTB";
-            this.NameTB.Size = new System.Drawing.Size(126, 23);
+            this.NameTB.Size = new System.Drawing.Size(159, 23);
             this.NameTB.TabIndex = 19;
             // 
             // NameLabel
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.Location = new System.Drawing.Point(77, 191);
+            this.NameLabel.Location = new System.Drawing.Point(68, 192);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(38, 19);
             this.NameLabel.TabIndex = 18;
@@ -123,16 +123,16 @@
             // SurnameTB
             // 
             this.SurnameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameTB.Location = new System.Drawing.Point(170, 229);
+            this.SurnameTB.Location = new System.Drawing.Point(161, 230);
             this.SurnameTB.Name = "SurnameTB";
-            this.SurnameTB.Size = new System.Drawing.Size(126, 23);
+            this.SurnameTB.Size = new System.Drawing.Size(159, 23);
             this.SurnameTB.TabIndex = 21;
             // 
             // SurnameLabel
             // 
             this.SurnameLabel.AutoSize = true;
             this.SurnameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameLabel.Location = new System.Drawing.Point(75, 229);
+            this.SurnameLabel.Location = new System.Drawing.Point(66, 230);
             this.SurnameLabel.Name = "SurnameLabel";
             this.SurnameLabel.Size = new System.Drawing.Size(73, 19);
             this.SurnameLabel.TabIndex = 20;
@@ -141,16 +141,16 @@
             // FathernameTB
             // 
             this.FathernameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FathernameTB.Location = new System.Drawing.Point(170, 268);
+            this.FathernameTB.Location = new System.Drawing.Point(161, 269);
             this.FathernameTB.Name = "FathernameTB";
-            this.FathernameTB.Size = new System.Drawing.Size(126, 23);
+            this.FathernameTB.Size = new System.Drawing.Size(159, 23);
             this.FathernameTB.TabIndex = 23;
             // 
             // FathernameLabel
             // 
             this.FathernameLabel.AutoSize = true;
             this.FathernameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FathernameLabel.Location = new System.Drawing.Point(77, 268);
+            this.FathernameLabel.Location = new System.Drawing.Point(68, 269);
             this.FathernameLabel.Name = "FathernameLabel";
             this.FathernameLabel.Size = new System.Drawing.Size(71, 19);
             this.FathernameLabel.TabIndex = 22;
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 440);
+            this.ClientSize = new System.Drawing.Size(379, 440);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.FathernameTB);
             this.Controls.Add(this.FathernameLabel);
