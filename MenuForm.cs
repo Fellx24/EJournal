@@ -20,8 +20,8 @@ namespace DBUse
         private void ProfileButton_Click(object sender, EventArgs e)
         {
             ProfileForm profileForm = new ProfileForm();
-            profileForm.Show();
-            
+            profileForm.Show();  
         }
+        
     }
 }

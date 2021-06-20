@@ -50,9 +50,9 @@
             this.RegisterLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegisterLabel.Location = new System.Drawing.Point(23, 46);
             this.RegisterLabel.Name = "RegisterLabel";
-            this.RegisterLabel.Size = new System.Drawing.Size(406, 36);
+            this.RegisterLabel.Size = new System.Drawing.Size(193, 36);
             this.RegisterLabel.TabIndex = 13;
-            this.RegisterLabel.Text = "Здравствуйте, Мария Ивановна";
+            this.RegisterLabel.Text = "Здравствуйте, ";
             this.RegisterLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button2

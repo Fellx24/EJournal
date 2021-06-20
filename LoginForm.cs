@@ -16,7 +16,6 @@ namespace DBUse
         {
             InitializeComponent();
         }
-
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
@@ -27,7 +26,6 @@ namespace DBUse
         {
             MenuForm menu = new MenuForm();
             menu.Show();
-            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
