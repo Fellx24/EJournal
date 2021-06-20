@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace EJournal
 {
@@ -40,6 +41,7 @@ namespace EJournal
                 MenuForm menu = new MenuForm();
                 menu.Show();
             }
+            emailarr = null;
             conn.Close();
         }
 
