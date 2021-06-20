@@ -22,36 +22,32 @@ namespace EJournal
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
+            string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},\'{EmailTB.Text}\')";
             conn.Open();
-            NpgsqlDataAdapter emails = new NpgsqlDataAdapter($"SELECT email FROM public.teacher",conn);
-            string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{EmailTB.Text})";
-            if (EmailTB.Text.Contains("@"))
-            {
+            NpgsqlDataReader reader = null;
+            NpgsqlCommand emailcheck = new NpgsqlCommand($"SELECT email FROM public.teacher", conn);
+            reader = emailcheck.ExecuteReader();
                 try
                 {
-                    conn.Open();
-                    NpgsqlCommand insertinfo = new NpgsqlCommand(insertquery, conn);
-                    insertinfo.ExecuteReader();
-                    conn.Close();
-                    conn.Open();
-                    NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password) VALUES ({PasswordTB.Text})", conn);
-                    insertpwd.ExecuteReader();
-                    conn.Close();
-                    MenuForm menu = new MenuForm();
-                    menu.Show();
-                    Close();
+                    
+                conn.Open();
+                NpgsqlCommand insertinfo = new NpgsqlCommand(insertquery, conn);
+                insertinfo.ExecuteReader();
+                conn.Close();
+                conn.Open();
+                NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password,email) VALUES ({PasswordTB.Text.ToString()},\'{EmailTB.Text.ToString()}\')", conn);
+                insertpwd.ExecuteReader();
+                conn.Close();
+                MenuForm menu = new MenuForm();
+                menu.Show();
                 }
-                catch (PostgresException)
+                catch (NpgsqlException)
                 {
                     MessageBox.Show("Неправильный ввод либо E-mail уже зарегестрирован");
                     conn.Close();
                 }
-            }
-            else MessageBox.Show("Неправильный ввод");
-        }
 
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
+            conn.Close();
         }
 
         private void RegisterLabel_Click(object sender, EventArgs e)
