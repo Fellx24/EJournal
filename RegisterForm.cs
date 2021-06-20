@@ -25,14 +25,12 @@ namespace EJournal
         {
             string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},\'{EmailTB.Text}\')";
             conn.Open();
-
-            NpgsqlDataReader reader = null;
             NpgsqlCommand emailcheck = new NpgsqlCommand($"SELECT email FROM public.teacher", conn);
-            reader = emailcheck.ExecuteReader();
+            NpgsqlDataReader emailreader = emailcheck.ExecuteReader();
             string email = " ";
-            foreach (var item in reader)
+            foreach (var item in emailreader)
             {
-                email += reader["email"].ToString() + " ";
+                email += emailreader["email"].ToString() + " ";
             }
             string[] emailmas = email.Split(' ').ToArray();
             conn.Close();
@@ -57,8 +55,6 @@ namespace EJournal
             conn.Close();
         }
 
-        private void RegisterLabel_Click(object sender, EventArgs e)
-        {
-        }
+
     }
 }
