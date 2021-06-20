@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.ProfileButton = new System.Windows.Forms.Button();
-            this.RegisterLabel = new System.Windows.Forms.Label();
+            this.MainLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,16 +44,16 @@
             this.ProfileButton.UseVisualStyleBackColor = true;
             this.ProfileButton.Click += new System.EventHandler(this.ProfileButton_Click);
             // 
-            // RegisterLabel
+            // MainLabel
             // 
-            this.RegisterLabel.AutoSize = true;
-            this.RegisterLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.RegisterLabel.Location = new System.Drawing.Point(23, 46);
-            this.RegisterLabel.Name = "RegisterLabel";
-            this.RegisterLabel.Size = new System.Drawing.Size(193, 36);
-            this.RegisterLabel.TabIndex = 13;
-            this.RegisterLabel.Text = "Здравствуйте, ";
-            this.RegisterLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.MainLabel.AutoSize = true;
+            this.MainLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainLabel.Location = new System.Drawing.Point(23, 46);
+            this.MainLabel.Name = "MainLabel";
+            this.MainLabel.Size = new System.Drawing.Size(406, 36);
+            this.MainLabel.TabIndex = 13;
+            this.MainLabel.Text = "Здравствуйте, Мария Ивановна";
+            this.MainLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // button2
             // 
@@ -71,10 +71,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 298);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.RegisterLabel);
+            this.Controls.Add(this.MainLabel);
             this.Controls.Add(this.ProfileButton);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,7 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Button ProfileButton;
-        private System.Windows.Forms.Label RegisterLabel;
+        private System.Windows.Forms.Label MainLabel;
         private System.Windows.Forms.Button button2;
     }
 }

@@ -15,6 +15,9 @@ namespace DBUse
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            Close();
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace DBUse
 
         private void RegisterLabel_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

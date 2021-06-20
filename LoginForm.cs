@@ -20,6 +20,7 @@ namespace DBUse
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
+            Hide();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
