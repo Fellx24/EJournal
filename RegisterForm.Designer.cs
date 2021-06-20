@@ -105,7 +105,7 @@
             // NameTB
             // 
             this.NameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTB.Location = new System.Drawing.Point(170, 191);
+            this.NameTB.Location = new System.Drawing.Point(170, 187);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(126, 23);
             this.NameTB.TabIndex = 19;
