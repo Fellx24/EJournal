@@ -21,7 +21,12 @@ namespace DBUse
         {
             ProfileForm profileForm = new ProfileForm();
             profileForm.Show();
-            
+            Close();
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            MainLabel.Text = "Nig" + "ger";
         }
     }
 }

@@ -15,11 +15,14 @@ namespace DBUse
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            Close();
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            NpgsqlDataAdapter emails = new NpgsqlDataAdapter($"SELECT email FROM public.teacher",);
+            NpgsqlDataAdapter emails = new NpgsqlDataAdapter($"SELECT email FROM public.teacher", conn);
             emails.ToString();
             string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{EmailTB.Text})";
             if (EmailTB.Text.Contains("@"))
@@ -52,7 +55,7 @@ namespace DBUse
 
         private void RegisterLabel_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

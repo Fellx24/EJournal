@@ -21,13 +21,17 @@ namespace DBUse
         {
             RegisterForm registerForm = new RegisterForm();
             registerForm.Show();
+            Hide();
         }
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            MenuForm menu = new MenuForm();
-            menu.Show();
-            
+            if (EmailTB.Text == "nigg3r@nig.ger" && PasswordTB.Text == "nigg333r")
+            {
+                MenuForm menu = new MenuForm();
+                menu.Show();
+                Hide();
+            }
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
