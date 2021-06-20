@@ -27,6 +27,7 @@ namespace DBUse
             NpgsqlDataReader reader = null;
             NpgsqlCommand emailcheck = new NpgsqlCommand($"SELECT email FROM public.teacher", conn);
             reader = emailcheck.ExecuteReader();
+            conn.Close();
                 try
                 {
                     
