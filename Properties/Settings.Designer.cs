@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DBUse.Properties
+namespace EJournal.Properties
 {
 
 

@@ -1,4 +1,4 @@
-﻿namespace DBUse
+﻿namespace EJournal
 {
     partial class LoginForm
     {

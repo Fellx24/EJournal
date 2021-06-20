@@ -1,4 +1,4 @@
-﻿namespace DBUse
+﻿namespace EJournal
 {
     partial class MarksViewForm
     {
@@ -37,6 +37,8 @@
             this.MarkTB = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
             this.EmailTB = new System.Windows.Forms.TextBox();
+            this.BackButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,11 +51,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(735, 369);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // SurnameTB
             // 
             this.SurnameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameTB.Location = new System.Drawing.Point(130, 417);
+            this.SurnameTB.Location = new System.Drawing.Point(136, 399);
             this.SurnameTB.Name = "SurnameTB";
             this.SurnameTB.Size = new System.Drawing.Size(118, 23);
             this.SurnameTB.TabIndex = 3;
@@ -62,7 +65,7 @@
             // 
             this.SurnameLabel.AutoSize = true;
             this.SurnameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SurnameLabel.Location = new System.Drawing.Point(54, 417);
+            this.SurnameLabel.Location = new System.Drawing.Point(60, 399);
             this.SurnameLabel.Name = "SurnameLabel";
             this.SurnameLabel.Size = new System.Drawing.Size(73, 19);
             this.SurnameLabel.TabIndex = 4;
@@ -72,7 +75,7 @@
             // 
             this.NameLabel.AutoSize = true;
             this.NameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameLabel.Location = new System.Drawing.Point(294, 417);
+            this.NameLabel.Location = new System.Drawing.Point(300, 399);
             this.NameLabel.Name = "NameLabel";
             this.NameLabel.Size = new System.Drawing.Size(38, 19);
             this.NameLabel.TabIndex = 9;
@@ -81,7 +84,7 @@
             // NameTB
             // 
             this.NameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameTB.Location = new System.Drawing.Point(335, 417);
+            this.NameTB.Location = new System.Drawing.Point(341, 399);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(118, 23);
             this.NameTB.TabIndex = 8;
@@ -122,11 +125,34 @@
             this.EmailTB.Size = new System.Drawing.Size(118, 23);
             this.EmailTB.TabIndex = 16;
             // 
+            // BackButton
+            // 
+            this.BackButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BackButton.Location = new System.Drawing.Point(58, 432);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(99, 28);
+            this.BackButton.TabIndex = 28;
+            this.BackButton.Text = "Назад";
+            this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveButton.Location = new System.Drawing.Point(360, 432);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(99, 28);
+            this.SaveButton.TabIndex = 29;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            // 
             // MarksViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 471);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.MarkLabel);
@@ -156,6 +182,8 @@
         private System.Windows.Forms.TextBox MarkTB;
         private System.Windows.Forms.Label EmailLabel;
         private System.Windows.Forms.TextBox EmailTB;
+        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button SaveButton;
     }
 }
 

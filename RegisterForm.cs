@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace DBUse
+namespace EJournal
 {
     public partial class RegisterForm : Form
     {
@@ -45,6 +45,7 @@ namespace DBUse
                 catch (NpgsqlException)
                 {
                     MessageBox.Show("Неправильный ввод либо E-mail уже зарегестрирован");
+                    conn.Close();
                 }
 
             conn.Close();

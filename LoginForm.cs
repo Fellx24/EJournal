@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DBUse
+namespace EJournal
 {
     public partial class LoginForm : Form
     {
@@ -16,6 +16,7 @@ namespace DBUse
         {
             InitializeComponent();
         }
+
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             RegisterForm registerForm = new RegisterForm();
