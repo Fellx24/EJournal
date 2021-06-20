@@ -24,8 +24,6 @@ namespace EJournal
         {
             conn.Open();
             NpgsqlDataAdapter emails = new NpgsqlDataAdapter($"SELECT email FROM public.teacher",conn);
-            string email = emails
-            
             string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{EmailTB.Text})";
             if (EmailTB.Text.Contains("@"))
             {
@@ -40,6 +38,8 @@ namespace EJournal
                     insertpwd.ExecuteReader();
                     conn.Close();
                     MenuForm menu = new MenuForm();
+                    menu.Show();
+                    Close();
                 }
                 catch (PostgresException)
                 {
