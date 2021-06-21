@@ -25,12 +25,11 @@ namespace EJournal
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             SQLServer query = new SQLServer();
-            string[] emailarr = query.SearchData("public.users", "email", conn);
+            string[] emailarr = query.SearchData("public.users", "email", "" , conn);
 
             if (emailarr.Contains(EmailTB.Text))
             {
                 MessageBox.Show("E-mail уже зарегестрирован");
-                conn.Close();
             }
             else if (EmailTB.Text.Contains('@'))
             {

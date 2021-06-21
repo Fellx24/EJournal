@@ -27,10 +27,10 @@ namespace EJournal
             insertinfo.ExecuteReader();
             conn.Close();
         }
-        public string[] SearchData(string table, string column, NpgsqlConnection conn)
+        public string[] SearchData(string table, string column, string condition ,NpgsqlConnection conn)
         {
             conn.Open();
-            NpgsqlCommand command = new NpgsqlCommand($"SELECT {column} FROM {table} ", conn);
+            NpgsqlCommand command = new NpgsqlCommand($"SELECT {column} FROM {table} {condition} ", conn);
             NpgsqlDataReader reader = command.ExecuteReader();
             string String = " ";
             foreach (var item in reader)
