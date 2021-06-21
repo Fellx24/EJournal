@@ -12,7 +12,7 @@ namespace EJournal
         public NpgsqlConnection GetConnection()
         {
             return new NpgsqlConnection(
-        @"Server=queenie.db.elephantsql.com;
+       @"Server=queenie.db.elephantsql.com;
         Port=5432;
         User Id=qenbptuc;
         Password=p96CcZ62GcjzSr7Ih0Gja7SH_asuHiag;
@@ -20,10 +20,10 @@ namespace EJournal
         );
             
         }
-        public void Query(string query, NpgsqlConnection conn)
+        public void InsertQuery(string table, string values, NpgsqlConnection conn)
         {
             conn.Open();
-            NpgsqlCommand insertinfo = new NpgsqlCommand(query, conn);
+            NpgsqlCommand insertinfo = new NpgsqlCommand($"INSERT INTO {table} VALUES({values}) ", conn);
             insertinfo.ExecuteReader();
             conn.Close();
         }

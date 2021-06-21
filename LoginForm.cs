@@ -27,6 +27,7 @@ namespace EJournal
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
+
             MenuForm menu = new MenuForm();
             menu.Show();
             
