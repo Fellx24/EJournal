@@ -41,5 +41,11 @@ namespace EJournal
             conn.Close();
             return stringarr;
         }
+        enum Roles
+        {
+            student = 0,
+            teacher = 1,
+            admin = 2,
+        }
     }
 }
