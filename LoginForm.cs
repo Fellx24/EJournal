@@ -29,7 +29,7 @@ namespace EJournal
         {
             MenuForm menu = new MenuForm();
             menu.Show();
-            Hide();
+            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
