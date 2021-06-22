@@ -66,5 +66,19 @@ namespace EJournal
         {
 
         }
+
+        private void StudentsListButton_Click(object sender, EventArgs e)
+        {
+            StudentsViewForm studForm = new StudentsViewForm();
+            studForm.Show();
+            Close();
+        }
+
+        private void TeachersListButton_Click(object sender, EventArgs e)
+        {
+            TeachersViewForm teachForm = new TeachersViewForm();
+            teachForm.Show();
+            Close();
+        }
     }
 }

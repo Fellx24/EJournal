@@ -29,16 +29,20 @@
         private void InitializeComponent()
         {
             this.ProfileButton = new System.Windows.Forms.Button();
-            this.MainLabel = new System.Windows.Forms.Label();
+            this.MainLabelDeleted = new System.Windows.Forms.Label();
             this.OpenButton = new System.Windows.Forms.Button();
             this.ClassesCB = new System.Windows.Forms.ComboBox();
             this.SubjectsCB = new System.Windows.Forms.ComboBox();
+            this.MainLabel = new System.Windows.Forms.Label();
+            this.StudentsListButton = new System.Windows.Forms.Button();
+            this.TeachersListButton = new System.Windows.Forms.Button();
+            this.JournalOpenLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ProfileButton
             // 
             this.ProfileButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ProfileButton.Location = new System.Drawing.Point(167, 107);
+            this.ProfileButton.Location = new System.Drawing.Point(172, 111);
             this.ProfileButton.Name = "ProfileButton";
             this.ProfileButton.Size = new System.Drawing.Size(99, 28);
             this.ProfileButton.TabIndex = 12;
@@ -46,20 +50,20 @@
             this.ProfileButton.UseVisualStyleBackColor = true;
             this.ProfileButton.Click += new System.EventHandler(this.ProfileButton_Click);
             // 
-            // MainLabel
+            // MainLabelDeleted
             // 
-            this.MainLabel.AutoSize = true;
-            this.MainLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MainLabel.Location = new System.Drawing.Point(23, 46);
-            this.MainLabel.Name = "MainLabel";
-            this.MainLabel.Size = new System.Drawing.Size(0, 36);
-            this.MainLabel.TabIndex = 13;
-            this.MainLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.MainLabelDeleted.AutoSize = true;
+            this.MainLabelDeleted.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainLabelDeleted.Location = new System.Drawing.Point(23, 46);
+            this.MainLabelDeleted.Name = "MainLabelDeleted";
+            this.MainLabelDeleted.Size = new System.Drawing.Size(0, 36);
+            this.MainLabelDeleted.TabIndex = 13;
+            this.MainLabelDeleted.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // OpenButton
             // 
             this.OpenButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.OpenButton.Location = new System.Drawing.Point(237, 181);
+            this.OpenButton.Location = new System.Drawing.Point(245, 370);
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(99, 28);
             this.OpenButton.TabIndex = 15;
@@ -73,7 +77,7 @@
             this.ClassesCB.FormattingEnabled = true;
             this.ClassesCB.Items.AddRange(new object[] {
             "8Б"});
-            this.ClassesCB.Location = new System.Drawing.Point(97, 165);
+            this.ClassesCB.Location = new System.Drawing.Point(105, 354);
             this.ClassesCB.Name = "ClassesCB";
             this.ClassesCB.Size = new System.Drawing.Size(121, 23);
             this.ClassesCB.TabIndex = 16;
@@ -86,25 +90,72 @@
             this.SubjectsCB.Items.AddRange(new object[] {
             "Информатика",
             "Математика"});
-            this.SubjectsCB.Location = new System.Drawing.Point(97, 203);
+            this.SubjectsCB.Location = new System.Drawing.Point(105, 392);
             this.SubjectsCB.Name = "SubjectsCB";
             this.SubjectsCB.Size = new System.Drawing.Size(121, 23);
             this.SubjectsCB.TabIndex = 18;
             this.SubjectsCB.Visible = false;
             // 
+            // MainLabel
+            // 
+            this.MainLabel.AutoSize = true;
+            this.MainLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainLabel.Location = new System.Drawing.Point(128, 46);
+            this.MainLabel.Name = "MainLabel";
+            this.MainLabel.Size = new System.Drawing.Size(197, 36);
+            this.MainLabel.TabIndex = 19;
+            this.MainLabel.Text = "Здравствуйте, ";
+            this.MainLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // StudentsListButton
+            // 
+            this.StudentsListButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.StudentsListButton.Location = new System.Drawing.Point(56, 178);
+            this.StudentsListButton.Name = "StudentsListButton";
+            this.StudentsListButton.Size = new System.Drawing.Size(143, 28);
+            this.StudentsListButton.TabIndex = 20;
+            this.StudentsListButton.Text = "Список учеников";
+            this.StudentsListButton.UseVisualStyleBackColor = true;
+            this.StudentsListButton.Click += new System.EventHandler(this.StudentsListButton_Click);
+            // 
+            // TeachersListButton
+            // 
+            this.TeachersListButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TeachersListButton.Location = new System.Drawing.Point(245, 178);
+            this.TeachersListButton.Name = "TeachersListButton";
+            this.TeachersListButton.Size = new System.Drawing.Size(143, 28);
+            this.TeachersListButton.TabIndex = 21;
+            this.TeachersListButton.Text = "Список учителей";
+            this.TeachersListButton.UseVisualStyleBackColor = true;
+            this.TeachersListButton.Click += new System.EventHandler(this.TeachersListButton_Click);
+            // 
+            // JournalOpenLabel
+            // 
+            this.JournalOpenLabel.AutoSize = true;
+            this.JournalOpenLabel.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.JournalOpenLabel.Location = new System.Drawing.Point(180, 319);
+            this.JournalOpenLabel.Name = "JournalOpenLabel";
+            this.JournalOpenLabel.Size = new System.Drawing.Size(100, 15);
+            this.JournalOpenLabel.TabIndex = 22;
+            this.JournalOpenLabel.Text = "Открыть журнал";
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 265);
+            this.ClientSize = new System.Drawing.Size(438, 454);
+            this.Controls.Add(this.JournalOpenLabel);
+            this.Controls.Add(this.TeachersListButton);
+            this.Controls.Add(this.StudentsListButton);
+            this.Controls.Add(this.MainLabel);
             this.Controls.Add(this.SubjectsCB);
             this.Controls.Add(this.ClassesCB);
             this.Controls.Add(this.OpenButton);
-            this.Controls.Add(this.MainLabel);
+            this.Controls.Add(this.MainLabelDeleted);
             this.Controls.Add(this.ProfileButton);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
-            this.Load += new System.EventHandler(this.MenuForm_Load_1);
+            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,9 +164,13 @@
         #endregion
 
         private System.Windows.Forms.Button ProfileButton;
-        private System.Windows.Forms.Label MainLabel;
+        private System.Windows.Forms.Label MainLabelDeleted;
         private System.Windows.Forms.Button OpenButton;
         private System.Windows.Forms.ComboBox ClassesCB;
         private System.Windows.Forms.ComboBox SubjectsCB;
+        private System.Windows.Forms.Label MainLabel;
+        private System.Windows.Forms.Button StudentsListButton;
+        private System.Windows.Forms.Button TeachersListButton;
+        private System.Windows.Forms.Label JournalOpenLabel;
     }
 }

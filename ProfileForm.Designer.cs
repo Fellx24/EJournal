@@ -45,7 +45,7 @@
             // 
             this.ProfileLabel.AutoSize = true;
             this.ProfileLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ProfileLabel.Location = new System.Drawing.Point(113, 65);
+            this.ProfileLabel.Location = new System.Drawing.Point(147, 62);
             this.ProfileLabel.Name = "ProfileLabel";
             this.ProfileLabel.Size = new System.Drawing.Size(186, 36);
             this.ProfileLabel.TabIndex = 0;
@@ -75,7 +75,7 @@
             // 
             this.ExitButton.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.Red;
-            this.ExitButton.Location = new System.Drawing.Point(136, 297);
+            this.ExitButton.Location = new System.Drawing.Point(177, 296);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(99, 28);
             this.ExitButton.TabIndex = 7;
@@ -155,7 +155,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 348);
+            this.ClientSize = new System.Drawing.Size(453, 348);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.EmailLabel);

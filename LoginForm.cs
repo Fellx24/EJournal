@@ -44,7 +44,7 @@ namespace EJournal
                     email = EmailTB.Text;
                     string[] rolecheck = query.SearchData("Users", "role", $"WHERE email = \'{EmailTB.Text}\'", conn);
                     role = int.Parse(rolecheck[1]);
-                    
+                    Hide();
                 }
                 else MessageBox.Show("E-mail уже зарегестрирован");
             }
