@@ -53,13 +53,5 @@ namespace EJournal
             FathernameTB.Text = fio[1];
             return fio;
         }
-
-        enum Roles
-        {
-            student = 0,
-            teacher = 1,
-            admin = 2
-        }
-
     }
 }
