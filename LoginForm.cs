@@ -15,6 +15,10 @@ namespace EJournal
     {
         SQLServer query = new SQLServer();
         NpgsqlConnection conn = new SQLServer().GetConnection();
+        public static string email;
+        public static int role;
+        
+
         public LoginForm()
         {
             InitializeComponent();
@@ -32,11 +36,15 @@ namespace EJournal
         {
             try
             {
-                string[] passwordcheck = query.SearchData("users", "password", $"WHERE email = {EmailTB.Text}", conn);
+                string[] passwordcheck = query.SearchData("Users", "password",$"WHERE email = \'{EmailTB.Text}\'", conn);
                 if (passwordcheck.Contains(PasswordTB.Text))
                 {
                     MenuForm menu = new MenuForm();
                     menu.Show();
+                    email = EmailTB.Text;
+                    string[] rolecheck = query.SearchData("Users", "role", $"WHERE email = \'{EmailTB.Text}\'", conn);
+                    role = int.Parse(rolecheck[1]);
+                    
                 }
                 else MessageBox.Show("E-mail уже зарегестрирован");
             }
@@ -44,6 +52,7 @@ namespace EJournal
             {
                 MessageBox.Show("E-mail не зарегестрирован");
             }
+            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace EJournal
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             SQLServer query = new SQLServer();
-            string[] emailarr = query.SearchData("public.users", "email", "" , conn);
+            string[] emailarr = query.SearchData("Users", "email","", conn);
 
             if (emailarr.Contains(EmailTB.Text))
             {
@@ -33,7 +33,7 @@ namespace EJournal
             }
             else if (EmailTB.Text.Contains('@'))
             {
-                query.InsertQuery($"public.users(surname, name, fathername, password, email)", $"{SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{PasswordTB.Text}, \'{EmailTB.Text}\'" , conn);
+                query.InsertQuery($"\"Users\"(Surname, Name, Fathername, password, email)", $"{SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{PasswordTB.Text}, \'{EmailTB.Text}\'" , conn);
                 LoginForm login = new LoginForm();
                 login.Show();
                 Close();

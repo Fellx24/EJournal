@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace EJournal
 {
     public partial class ProfileForm : Form
     {
+        NpgsqlConnection conn = new SQLServer().GetConnection();
+        SQLServer query = new SQLServer();
         public ProfileForm()
         {
             InitializeComponent();
@@ -19,7 +22,8 @@ namespace EJournal
 
         private void ProfileForm_Load(object sender, EventArgs e)
         {
-
+            query.RecieveFIO(SurnameTB, NameTB, FathernameTB, conn);
+            EmailTB.Text = LoginForm.email;
         }
 
         private void BackButton_Click(object sender, EventArgs e)

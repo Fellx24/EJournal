@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace EJournal
 {
     public partial class MenuForm : Form
     {
+        NpgsqlConnection conn = new SQLServer().GetConnection();
+        SQLServer query = new SQLServer();
         public MenuForm()
         {
             InitializeComponent();
@@ -33,7 +36,12 @@ namespace EJournal
 
         private void MenuForm_Load(object sender, EventArgs e)
         {
-
+            string welcome = "Здравствуйте, ";
+            string[] fo = query.SearchData("Users", "Name", $"WHERE email = \'{LoginForm.email}\'", conn);
+            welcome += fo[1] + " ";
+            fo = query.SearchData("Users", "Fathername", $"WHERE email = \'{LoginForm.email}\'", conn);
+            welcome += fo[1];
+            MainLabel.Text = welcome;
         }
 
         private void OpenButton_Click(object sender, EventArgs e)
