@@ -1,6 +1,8 @@
 ﻿using Npgsql;
 using System;
+using System.Linq;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace EJournal
 {
@@ -22,38 +24,26 @@ namespace EJournal
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            string insertquery = $"INSERT INTO public.teacher(surname,name,fathername,email) VALUES ({SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},\'{EmailTB.Text}\')";
-            conn.Open();
-            NpgsqlDataReader reader = null;
-            NpgsqlCommand emailcheck = new NpgsqlCommand($"SELECT email FROM public.teacher", conn);
-            reader = emailcheck.ExecuteReader();
-            conn.Close();
-                try
-                {
-                    
-                conn.Open();
-                NpgsqlCommand insertinfo = new NpgsqlCommand(insertquery, conn);
-                insertinfo.ExecuteReader();
-                conn.Close();
-                conn.Open();
-                NpgsqlCommand insertpwd = new NpgsqlCommand($"INSERT INTO public.users(password,email) VALUES ({PasswordTB.Text.ToString()},\'{EmailTB.Text.ToString()}\')", conn);
-                insertpwd.ExecuteReader();
-                conn.Close();
-                MenuForm menu = new MenuForm();
-                menu.Show();
-                }
-                catch (NpgsqlException)
-                {
-                    MessageBox.Show("Неправильный ввод либо E-mail уже зарегестрирован");
-                    conn.Close();
-                }
+            SQLServer query = new SQLServer();
+            string[] emailarr = query.SearchData("Users", "email","", conn);
 
-            conn.Close();
+            if (emailarr.Contains(EmailTB.Text))
+            {
+                MessageBox.Show("E-mail уже зарегестрирован");
+            }
+            else if (EmailTB.Text.Contains('@'))
+            {
+                query.InsertQuery($"\"Users\"(Surname, Name, Fathername, password, email)", $"{SurnameTB.Text},{NameTB.Text},{FathernameTB.Text},{PasswordTB.Text}, \'{EmailTB.Text}\'" , conn);
+                LoginForm login = new LoginForm();
+                login.Show();
+                Close();
+
+            }
+            emailarr = null;
         }
 
         private void RegisterLabel_Click(object sender, EventArgs e)
         {
-            
         }
     }
 }

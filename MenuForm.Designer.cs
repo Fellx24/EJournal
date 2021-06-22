@@ -52,9 +52,8 @@
             this.MainLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainLabel.Location = new System.Drawing.Point(23, 46);
             this.MainLabel.Name = "MainLabel";
-            this.MainLabel.Size = new System.Drawing.Size(406, 36);
+            this.MainLabel.Size = new System.Drawing.Size(0, 36);
             this.MainLabel.TabIndex = 13;
-            this.MainLabel.Text = "Здравствуйте, Мария Ивановна";
             this.MainLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // OpenButton
