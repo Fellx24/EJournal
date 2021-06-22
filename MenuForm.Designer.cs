@@ -105,6 +105,7 @@
             this.Controls.Add(this.ProfileButton);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
+            this.Load += new System.EventHandler(this.MenuForm_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

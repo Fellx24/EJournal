@@ -12,6 +12,9 @@ namespace EJournal
 {
     public partial class LoginForm : Form
     {
+
+        public string role;
+
         public LoginForm()
         {
             InitializeComponent();
