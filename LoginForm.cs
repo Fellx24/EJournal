@@ -17,7 +17,7 @@ namespace EJournal
         NpgsqlConnection conn = new SQLServer().GetConnection();
         public static string email;
         public static int role;
-        public static int id;
+        public static int id = 2;
         
 
         public LoginForm()
@@ -47,6 +47,7 @@ namespace EJournal
                     role = int.Parse(rolecheck[1]);
                     string[] idrecieve = query.SearchData("Users", "user_id", $"WHERE email = \'{EmailTB.Text}\'", conn);
                     id = int.Parse(idrecieve[1]);
+                    Hide();
                 }
                 else MessageBox.Show("E-mail уже зарегестрирован");
             }

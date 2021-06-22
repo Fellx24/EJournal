@@ -40,10 +40,10 @@
             this.NameTB = new System.Windows.Forms.TextBox();
             this.SurnameLabel = new System.Windows.Forms.Label();
             this.SurnameTB = new System.Windows.Forms.TextBox();
-            this.TearchersDGV = new System.Windows.Forms.DataGridView();
+            this.TeachersDGV = new System.Windows.Forms.DataGridView();
             this.SaveButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TearchersDGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TeachersDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // ClassLabel
@@ -154,14 +154,14 @@
             this.SurnameTB.Size = new System.Drawing.Size(127, 23);
             this.SurnameTB.TabIndex = 32;
             // 
-            // TearchersDGV
+            // TeachersDGV
             // 
-            this.TearchersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TearchersDGV.Location = new System.Drawing.Point(12, 12);
-            this.TearchersDGV.Name = "TearchersDGV";
-            this.TearchersDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TearchersDGV.Size = new System.Drawing.Size(912, 362);
-            this.TearchersDGV.TabIndex = 31;
+            this.TeachersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TeachersDGV.Location = new System.Drawing.Point(12, 12);
+            this.TeachersDGV.Name = "TeachersDGV";
+            this.TeachersDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TeachersDGV.Size = new System.Drawing.Size(912, 362);
+            this.TeachersDGV.TabIndex = 31;
             // 
             // SaveButton
             // 
@@ -203,10 +203,11 @@
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.SurnameLabel);
             this.Controls.Add(this.SurnameTB);
-            this.Controls.Add(this.TearchersDGV);
+            this.Controls.Add(this.TeachersDGV);
             this.Name = "TeachersViewForm";
             this.Text = "TeachersViewForm";
-            ((System.ComponentModel.ISupportInitialize)(this.TearchersDGV)).EndInit();
+            this.Load += new System.EventHandler(this.TeachersViewForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.TeachersDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,7 +227,7 @@
         private System.Windows.Forms.TextBox NameTB;
         private System.Windows.Forms.Label SurnameLabel;
         private System.Windows.Forms.TextBox SurnameTB;
-        private System.Windows.Forms.DataGridView TearchersDGV;
+        private System.Windows.Forms.DataGridView TeachersDGV;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button BackButton;
     }

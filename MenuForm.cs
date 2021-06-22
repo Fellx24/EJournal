@@ -13,6 +13,7 @@ namespace EJournal
 {
     public partial class MenuForm : Form
     {
+        public static string SelectedClass;
         NpgsqlConnection conn = new SQLServer().GetConnection();
         SQLServer query = new SQLServer();
         public MenuForm()
@@ -42,18 +43,36 @@ namespace EJournal
             fo = query.SearchData("Users", "Fathername", $"WHERE email = \'{LoginForm.email}\'", conn);
             welcome += fo[1];
             MainLabel.Text = welcome;
+
+            switch (LoginForm.role)
+            {
+                case 2:
+                    StudentsListButton.Visible = true;
+                    TeachersListButton.Visible = true;
+                    StudentListCB.Visible = true;
+                    break;
+
+                case 1:
+                    break;
+                
+                default:
+                    ClassLabel.Visible = true;
+                    ClassesCB.Visible = false;
+                    SubjectsCB.Visible = true;
+                    break;
+            }
         }
 
         private void OpenButton_Click(object sender, EventArgs e)
         {
-            if(ClassesCB.SelectedItem != null && SubjectsCB.SelectedItem != null)
+            if (SubjectsCB.SelectedItem != null)
             {
                 OpenSubject(ClassesCB.Text, SubjectsCB.Text);
             }
 
-            if (ClassesCB.SelectedItem == null || SubjectsCB.SelectedItem == null)
+            if (SubjectsCB.SelectedItem == null)
             {
-                MessageBox.Show("ИДИОТ! Не смей нажимать на кнопку, если не выбран класс и предмет!");
+                MessageBox.Show("ИДИОТ! Не смей нажимать на кнопку, если не выбран предмет!");
             }
         }
 
@@ -69,6 +88,11 @@ namespace EJournal
 
         private void StudentsListButton_Click(object sender, EventArgs e)
         {
+            if (StudentListCB.SelectedItem != null && StudentListCB.SelectedItem.ToString() != "Все")
+            {
+                SelectedClass = StudentListCB.SelectedItem.ToString();
+            }
+            else StudentListCB = null;
             StudentsViewForm studForm = new StudentsViewForm();
             studForm.Show();
             Close();

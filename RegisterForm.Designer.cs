@@ -63,6 +63,7 @@
             this.PasswordTB.Name = "PasswordTB";
             this.PasswordTB.Size = new System.Drawing.Size(159, 23);
             this.PasswordTB.TabIndex = 16;
+            this.PasswordTB.UseSystemPasswordChar = true;
             // 
             // EmailTB
             // 

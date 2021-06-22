@@ -22,25 +22,33 @@ namespace EJournal
         private void refresher(DataGridView table)
         {
             conn.Open();
-            string query = "SELECT * FROM Students";
+            string query = "SELECT * FROM \"Users\" WHERE role = 0";
             NpgsqlDataAdapter dataStudent = new NpgsqlDataAdapter(query, conn);
             DataTable dt = new DataTable();
             dataStudent.Fill(dt);
             table.DataSource = dt;
             table.Columns[0].Visible = false;
+            table.Columns[6].Visible = false;
+            table.Columns[5].Visible = false;
+            table.Columns[1].HeaderText = "Фамилия";
+            table.Columns[2].HeaderText = "Имя";
+            table.Columns[3].HeaderText = "Отчество";
+            table.Columns[4].HeaderText = "Email";
+            table.Columns[7].HeaderText = "Дата рождения";
+            table.Columns[8].HeaderText = "Класс";
             conn.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void MarksViewForm_Load(object sender, EventArgs e)
         {
-            refresher(dataGridView1);
+            refresher(MarksDGV);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            SurnameTB.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
-            NameTB.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
-            MarkTB.Text = dataGridView1.SelectedRows[0].Cells[4].Value.ToString();
+            DateResultLabel.Text = MarksDGV.SelectedRows[0].Cells[2].Value.ToString();
+            NameResultLabel.Text = MarksDGV.SelectedRows[0].Cells[3].Value.ToString();
+            MarkTB.Text = MarksDGV.SelectedRows[0].Cells[4].Value.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -63,7 +63,6 @@
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(127, 23);
             this.NameTB.TabIndex = 21;
-            this.NameTB.TextChanged += new System.EventHandler(this.NameTB_TextChanged);
             // 
             // SurnameLabel
             // 
@@ -208,7 +207,7 @@
             this.Controls.Add(this.StudentsDGV);
             this.Name = "StudentsViewForm";
             this.Text = "StudentsView";
-            this.Load += new System.EventHandler(this.StudentsView_Load);
+            this.Load += new System.EventHandler(this.StudentsViewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
