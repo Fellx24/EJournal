@@ -16,6 +16,7 @@ namespace EJournal
         public static string SelectedClass;
         NpgsqlConnection conn = new SQLServer().GetConnection();
         SQLServer query = new SQLServer();
+
         public MenuForm()
         {
             InitializeComponent();
@@ -44,23 +45,7 @@ namespace EJournal
             welcome += fo[1];
             MainLabel.Text = welcome;
 
-            switch (LoginForm.role)
-            {
-                case 2:
-                    StudentsListButton.Visible = true;
-                    TeachersListButton.Visible = true;
-                    StudentListCB.Visible = true;
-                    break;
 
-                case 1:
-                    break;
-                
-                default:
-                    ClassLabel.Visible = true;
-                    ClassesCB.Visible = false;
-                    SubjectsCB.Visible = true;
-                    break;
-            }
         }
 
         private void OpenButton_Click(object sender, EventArgs e)

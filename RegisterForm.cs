@@ -32,7 +32,7 @@ namespace EJournal
             }
             else if (EmailTB.Text.Contains('@'))
             {
-                query.InsertQuery($"\"Users\"(\"Surname\", \"Name\", \"Fathername\", \"password\", \"email\", \"Birthdate\")", $"(\'{SurnameTB.Text}\',\'{NameTB.Text}\',\'{FathernameTB.Text}\',{PasswordTB.Text}\', \'{EmailTB.Text}\', \'{BirthdayTB.Text}\');" , conn);
+                query.InsertQuery($"\"Users\"(\"Surname\", \"Name\", \"Fathername\", \"password\", \"email\", \"Birthdate\")", $"(\'{SurnameTB.Text}\',\'{NameTB.Text}\',\'{FathernameTB.Text}\',\'{PasswordTB.Text}\', \'{EmailTB.Text}\', \'{BirthdayTB.Text}\');" , conn);
                 LoginForm login = new LoginForm();
                 login.Show();
                 Close();
