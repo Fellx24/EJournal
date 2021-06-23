@@ -25,7 +25,7 @@ namespace EJournal
         public void InsertQuery(string table, string values, NpgsqlConnection conn)
         {
             conn.Open();
-            NpgsqlCommand insertinfo = new NpgsqlCommand($"INSERT INTO {table} VALUES({values}) ", conn);
+            NpgsqlCommand insertinfo = new NpgsqlCommand($"INSERT INTO {table} VALUES {values} ", conn);
             insertinfo.ExecuteReader();
             conn.Close();
         }

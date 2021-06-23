@@ -57,7 +57,7 @@ namespace EJournal
                 table.Columns[3].HeaderText = "Отчество";
                 table.Columns[4].HeaderText = "Email";
                 table.Columns[7].HeaderText = "Дата рождения";
-                table.Columns[8].HeaderText = "Класс";
+                table.Columns[8].HeaderText = "Класс"; 
                 conn.Close();
             }
         }

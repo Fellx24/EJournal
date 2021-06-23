@@ -37,6 +37,7 @@ namespace EJournal
             table.Columns[7].HeaderText = "Дата рождения";
             table.Columns[8].HeaderText = "Класс";
             conn.Close();
+            
         }
 
         private void TeachersViewForm_Load(object sender, EventArgs e)
