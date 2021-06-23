@@ -49,7 +49,7 @@ namespace EJournal
                     id = int.Parse(idrecieve[1]);
                     Hide();
                 }
-                else MessageBox.Show("Неверный E-mail или пароль");
+                else MessageBox.Show("Неверный email или пароль");
             }
             catch (NpgsqlException)
             {
