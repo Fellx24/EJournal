@@ -69,7 +69,7 @@ namespace EJournal
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -77,6 +77,16 @@ namespace EJournal
             MenuForm menuForm = new MenuForm();
             menuForm.Show();
             Close();
+        }
+
+        private void StudentDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SurnameTB.Text = StudentsDGV.SelectedRows[0].Cells[1].Value.ToString();
+            NameTB.Text = StudentsDGV.SelectedRows[0].Cells[2].Value.ToString();
+            FathernameTB.Text = StudentsDGV.SelectedRows[0].Cells[3].Value.ToString();
+            BirthdayTB.Text = StudentsDGV.SelectedRows[0].Cells[7].Value.ToString();
+            ClassTB.Text = StudentsDGV.SelectedRows[0].Cells[8].Value.ToString();
+            EmailTB.Text = StudentsDGV.SelectedRows[0].Cells[4].Value.ToString();
         }
     }
 }

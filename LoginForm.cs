@@ -17,7 +17,7 @@ namespace EJournal
         NpgsqlConnection conn = new SQLServer().GetConnection();
         public static string email;
         public static int role;
-        public static int id = 2;
+        public static int id;
         
 
         public LoginForm()
@@ -49,7 +49,7 @@ namespace EJournal
                     id = int.Parse(idrecieve[1]);
                     Hide();
                 }
-                else MessageBox.Show("E-mail уже зарегестрирован");
+                else MessageBox.Show("Неверный E-mail или пароль");
             }
             catch (NpgsqlException)
             {

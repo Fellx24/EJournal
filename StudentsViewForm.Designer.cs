@@ -33,8 +33,8 @@
             this.SurnameLabel = new System.Windows.Forms.Label();
             this.SurnameTB = new System.Windows.Forms.TextBox();
             this.StudentsDGV = new System.Windows.Forms.DataGridView();
-            this.FathernameTB = new System.Windows.Forms.Label();
-            this.FatherTB = new System.Windows.Forms.TextBox();
+            this.FathernameLabel = new System.Windows.Forms.Label();
+            this.FathernameTB = new System.Windows.Forms.TextBox();
             this.BirthdayLabel = new System.Windows.Forms.Label();
             this.BirthdayTB = new System.Windows.Forms.TextBox();
             this.EmailLabel = new System.Windows.Forms.Label();
@@ -90,25 +90,26 @@
             this.StudentsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.StudentsDGV.Size = new System.Drawing.Size(912, 362);
             this.StudentsDGV.TabIndex = 18;
+            this.StudentsDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDGV_CellClick);
             this.StudentsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // FathernameLabel
+            // 
+            this.FathernameLabel.AutoSize = true;
+            this.FathernameLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FathernameLabel.Location = new System.Drawing.Point(652, 390);
+            this.FathernameLabel.Name = "FathernameLabel";
+            this.FathernameLabel.Size = new System.Drawing.Size(71, 19);
+            this.FathernameLabel.TabIndex = 24;
+            this.FathernameLabel.Text = "Отчество";
             // 
             // FathernameTB
             // 
-            this.FathernameTB.AutoSize = true;
-            this.FathernameTB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FathernameTB.Location = new System.Drawing.Point(652, 390);
+            this.FathernameTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FathernameTB.Location = new System.Drawing.Point(729, 390);
             this.FathernameTB.Name = "FathernameTB";
-            this.FathernameTB.Size = new System.Drawing.Size(71, 19);
-            this.FathernameTB.TabIndex = 24;
-            this.FathernameTB.Text = "Отчество";
-            // 
-            // FatherTB
-            // 
-            this.FatherTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FatherTB.Location = new System.Drawing.Point(729, 390);
-            this.FatherTB.Name = "FatherTB";
-            this.FatherTB.Size = new System.Drawing.Size(127, 23);
-            this.FatherTB.TabIndex = 23;
+            this.FathernameTB.Size = new System.Drawing.Size(127, 23);
+            this.FathernameTB.TabIndex = 23;
             // 
             // BirthdayLabel
             // 
@@ -198,8 +199,8 @@
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.BirthdayLabel);
             this.Controls.Add(this.BirthdayTB);
+            this.Controls.Add(this.FathernameLabel);
             this.Controls.Add(this.FathernameTB);
-            this.Controls.Add(this.FatherTB);
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.NameTB);
             this.Controls.Add(this.SurnameLabel);
@@ -220,8 +221,8 @@
         private System.Windows.Forms.Label SurnameLabel;
         private System.Windows.Forms.TextBox SurnameTB;
         private System.Windows.Forms.DataGridView StudentsDGV;
-        private System.Windows.Forms.Label FathernameTB;
-        private System.Windows.Forms.TextBox FatherTB;
+        private System.Windows.Forms.Label FathernameLabel;
+        private System.Windows.Forms.TextBox FathernameTB;
         private System.Windows.Forms.Label BirthdayLabel;
         private System.Windows.Forms.TextBox BirthdayTB;
         private System.Windows.Forms.Label EmailLabel;

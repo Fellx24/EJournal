@@ -43,6 +43,7 @@
             this.TeachersDGV = new System.Windows.Forms.DataGridView();
             this.SaveButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.SubjectLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TeachersDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             this.ClassTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ClassTB.Location = new System.Drawing.Point(729, 434);
             this.ClassTB.Name = "ClassTB";
-            this.ClassTB.Size = new System.Drawing.Size(72, 23);
+            this.ClassTB.Size = new System.Drawing.Size(38, 23);
             this.ClassTB.TabIndex = 42;
             // 
             // EmailLabel
@@ -157,11 +158,12 @@
             // TeachersDGV
             // 
             this.TeachersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TeachersDGV.Location = new System.Drawing.Point(12, 12);
+            this.TeachersDGV.Location = new System.Drawing.Point(12, 41);
             this.TeachersDGV.Name = "TeachersDGV";
             this.TeachersDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TeachersDGV.Size = new System.Drawing.Size(912, 362);
+            this.TeachersDGV.Size = new System.Drawing.Size(912, 333);
             this.TeachersDGV.TabIndex = 31;
+            this.TeachersDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TeachersDGV_CellClick);
             // 
             // SaveButton
             // 
@@ -184,11 +186,22 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // SubjectLabel
+            // 
+            this.SubjectLabel.AutoSize = true;
+            this.SubjectLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubjectLabel.Location = new System.Drawing.Point(12, 9);
+            this.SubjectLabel.Name = "SubjectLabel";
+            this.SubjectLabel.Size = new System.Drawing.Size(103, 19);
+            this.SubjectLabel.TabIndex = 46;
+            this.SubjectLabel.Text = "Информатика";
+            // 
             // TeachersViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 526);
+            this.Controls.Add(this.SubjectLabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.ClassLabel);
@@ -230,5 +243,6 @@
         private System.Windows.Forms.DataGridView TeachersDGV;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Label SubjectLabel;
     }
 }

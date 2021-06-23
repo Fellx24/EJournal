@@ -48,22 +48,7 @@ namespace EJournal
         {
             DateResultLabel.Text = MarksDGV.SelectedRows[0].Cells[2].Value.ToString();
             NameResultLabel.Text = MarksDGV.SelectedRows[0].Cells[3].Value.ToString();
-            MarkTB.Text = MarksDGV.SelectedRows[0].Cells[4].Value.ToString();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Class_Click(object sender, EventArgs e)
-        {
-
+            MarkCB.Text = MarksDGV.SelectedRows[0].Cells[4].Value.ToString();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
