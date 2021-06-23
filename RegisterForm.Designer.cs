@@ -208,7 +208,7 @@
             this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.RegisterLabel);
             this.Name = "RegisterForm";
-            this.Text = "RegisterForm";
+            this.Text = "EJournal";
             this.ResumeLayout(false);
             this.PerformLayout();
 
