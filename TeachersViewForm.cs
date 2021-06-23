@@ -51,5 +51,15 @@ namespace EJournal
             menuForm.Show();
             Close();
         }
+
+        private void TeachersDGV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SurnameTB.Text = TeachersDGV.SelectedRows[0].Cells[1].Value.ToString();
+            NameTB.Text = TeachersDGV.SelectedRows[0].Cells[2].Value.ToString();
+            FathernameTB.Text = TeachersDGV.SelectedRows[0].Cells[3].Value.ToString();
+            BirthdayTB.Text = TeachersDGV.SelectedRows[0].Cells[7].Value.ToString();
+            ClassTB.Text = TeachersDGV.SelectedRows[0].Cells[8].Value.ToString();
+            EmailTB.Text = TeachersDGV.SelectedRows[0].Cells[4].Value.ToString();
+        }
     }
 }
