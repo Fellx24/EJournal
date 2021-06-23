@@ -16,7 +16,6 @@ namespace EJournal
         public static string SelectedClass;
         NpgsqlConnection conn = new SQLServer().GetConnection();
         SQLServer query = new SQLServer();
-
         public MenuForm()
         {
             InitializeComponent();
@@ -45,9 +44,10 @@ namespace EJournal
             welcome += fo[1];
             MainLabel.Text = welcome;
 
+            SubjectsCB.Items.AddRange(query.SearchData("Subject", "title", $"WHERE user_id = {LoginForm.id}", conn));
 
         }
-
+        
         private void OpenButton_Click(object sender, EventArgs e)
         {
             if (SubjectsCB.SelectedItem != null)

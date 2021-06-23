@@ -37,9 +37,9 @@ namespace EJournal
             string String = " ";
             foreach (var item in reader)
             {
-                String += reader[$"{column}"].ToString() + " ";
+                String += reader[$"{column}"].ToString() + "|";
             }
-            string[] stringarr = String.Split(' ').ToArray();
+            string[] stringarr = String.Split('|').ToArray();
             conn.Close();
             return stringarr;
         }
@@ -53,6 +53,6 @@ namespace EJournal
             FathernameTB.Text = fio[1];
             return fio;
         }
-        p
+
     }
 }
