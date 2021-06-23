@@ -21,7 +21,6 @@ namespace EJournal
             loginForm.Show();
             Close();
         }
-
         private void RegisterButton_Click(object sender, EventArgs e)
         {
             SQLServer query = new SQLServer();

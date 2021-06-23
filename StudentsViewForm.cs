@@ -17,13 +17,12 @@ namespace EJournal
         {
             InitializeComponent();
         }
-
         NpgsqlConnection conn = new SQLServer().GetConnection();
         private void refresher(DataGridView table)
         {
             if (MenuForm.SelectedClass != null && MenuForm.SelectedClass != "Все")
             {
-                conn.Open();
+                 
                 string query = $"SELECT * FROM \"Users\" WHERE role = 0, class = {MenuForm.SelectedClass}";
                 NpgsqlDataAdapter dataStudent = new NpgsqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
@@ -38,7 +37,9 @@ namespace EJournal
                 table.Columns[4].HeaderText = "Email";
                 table.Columns[7].HeaderText = "Дата рождения";
                 table.Columns[8].HeaderText = "Класс";
-                conn.Close();
+                if (LoginForm.role == 0) table.ReadOnly = true;
+
+
             }
 
             if (MenuForm.SelectedClass == null || MenuForm.SelectedClass == "Все")
@@ -59,6 +60,7 @@ namespace EJournal
                 table.Columns[7].HeaderText = "Дата рождения";
                 table.Columns[8].HeaderText = "Класс"; 
                 conn.Close();
+                if (LoginForm.role == 0) table.ReadOnly = true;
             }
         }
 
