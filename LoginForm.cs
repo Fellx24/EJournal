@@ -17,7 +17,7 @@ namespace EJournal
         NpgsqlConnection conn = new SQLServer().GetConnection();
         public static string email;
         public static int role;
-        public static int id = 2;
+        public static int id;
         
 
         public LoginForm()
