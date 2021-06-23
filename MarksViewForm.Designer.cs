@@ -201,7 +201,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.MarksDGV);
             this.Name = "MarksViewForm";
-            this.Text = "8Б класс - Информатика";
+            this.Text = "EJournal";
             this.Load += new System.EventHandler(this.MarksViewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MarksDGV)).EndInit();
             this.ResumeLayout(false);

@@ -168,7 +168,7 @@
             this.Controls.Add(this.NameLabel);
             this.Controls.Add(this.ProfileLabel);
             this.Name = "ProfileForm";
-            this.Text = "ProfileForm";
+            this.Text = "EJournal";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

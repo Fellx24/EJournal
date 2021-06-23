@@ -100,13 +100,12 @@
             // 
             // MainLabel
             // 
-            this.MainLabel.AutoSize = true;
-            this.MainLabel.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MainLabel.Location = new System.Drawing.Point(128, 46);
+            this.MainLabel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MainLabel.Location = new System.Drawing.Point(12, 46);
             this.MainLabel.Name = "MainLabel";
-            this.MainLabel.Size = new System.Drawing.Size(197, 36);
+            this.MainLabel.Size = new System.Drawing.Size(414, 36);
             this.MainLabel.TabIndex = 19;
-            this.MainLabel.Text = "Здравствуйте, ";
+            this.MainLabel.Text = "Здравствуйте, Мария Ивановна";
             this.MainLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // StudentsListButton
@@ -184,7 +183,7 @@
             this.Controls.Add(this.MainLabelDeleted);
             this.Controls.Add(this.ProfileButton);
             this.Name = "MenuForm";
-            this.Text = "MenuForm";
+            this.Text = "EJournal";
             this.Load += new System.EventHandler(this.MenuForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

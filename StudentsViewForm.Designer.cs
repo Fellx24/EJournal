@@ -43,6 +43,7 @@
             this.ClassTB = new System.Windows.Forms.TextBox();
             this.BackButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.ListLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,10 +86,10 @@
             // StudentsDGV
             // 
             this.StudentsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsDGV.Location = new System.Drawing.Point(12, 12);
+            this.StudentsDGV.Location = new System.Drawing.Point(12, 31);
             this.StudentsDGV.Name = "StudentsDGV";
             this.StudentsDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.StudentsDGV.Size = new System.Drawing.Size(912, 362);
+            this.StudentsDGV.Size = new System.Drawing.Size(912, 343);
             this.StudentsDGV.TabIndex = 18;
             this.StudentsDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDGV_CellClick);
             this.StudentsDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -162,7 +163,7 @@
             this.ClassTB.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ClassTB.Location = new System.Drawing.Point(729, 434);
             this.ClassTB.Name = "ClassTB";
-            this.ClassTB.Size = new System.Drawing.Size(72, 23);
+            this.ClassTB.Size = new System.Drawing.Size(39, 23);
             this.ClassTB.TabIndex = 29;
             // 
             // BackButton
@@ -186,11 +187,22 @@
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
             // 
+            // ListLabel
+            // 
+            this.ListLabel.AutoSize = true;
+            this.ListLabel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ListLabel.Location = new System.Drawing.Point(12, 9);
+            this.ListLabel.Name = "ListLabel";
+            this.ListLabel.Size = new System.Drawing.Size(125, 19);
+            this.ListLabel.TabIndex = 48;
+            this.ListLabel.Text = "Список учеников";
+            // 
             // StudentsViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 525);
+            this.Controls.Add(this.ListLabel);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.ClassLabel);
@@ -207,7 +219,7 @@
             this.Controls.Add(this.SurnameTB);
             this.Controls.Add(this.StudentsDGV);
             this.Name = "StudentsViewForm";
-            this.Text = "StudentsView";
+            this.Text = "EJournal";
             this.Load += new System.EventHandler(this.StudentsViewForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDGV)).EndInit();
             this.ResumeLayout(false);
@@ -231,5 +243,6 @@
         private System.Windows.Forms.TextBox ClassTB;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Label ListLabel;
     }
 }

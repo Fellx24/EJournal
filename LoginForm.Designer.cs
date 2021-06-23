@@ -120,7 +120,7 @@
             this.Controls.Add(this.EmailLabel);
             this.Controls.Add(this.LoginLabel);
             this.Name = "LoginForm";
-            this.Text = "LoginForm";
+            this.Text = "EJournal";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
