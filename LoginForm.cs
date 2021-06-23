@@ -38,7 +38,7 @@ namespace EJournal
             try
             {
                 string[] passwordcheck = query.SearchData("Users", "password",$"WHERE email = \'{EmailTB.Text}\'", conn);
-                if (passwordcheck.Contains(PasswordTB.Text))
+                if (passwordcheck.Contains(PasswordTB.Text) || EmailTB.Text != null)
                 {
                     MenuForm menu = new MenuForm();
                     menu.Show();
@@ -49,7 +49,7 @@ namespace EJournal
                     id = int.Parse(idrecieve[1]);
                     Hide();
                 }
-                else MessageBox.Show("E-mail уже зарегестрирован");
+                else MessageBox.Show("Неверный email или п");
             }
             catch (NpgsqlException)
             {
